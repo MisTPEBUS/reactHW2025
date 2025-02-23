@@ -1,8 +1,14 @@
+import { Route, Routes } from "react-router-dom";
+import LoginComponent from "./components/LoginComponent";
+import ProductComponent from "./components/ProductComponent";
+
 const Week3 = () => {
   return (
-    <div className=" container bg-neutral-bg">
-      <h2 className="text-xl font-bold"> Page</h2>
-      <p>這裡是 Week3 內容...</p>
+    <div className="overflow-auto container">
+      <Routes>
+        <Route index element={<ProductComponent />} />
+        <Route path="login" element={<LoginComponent />} />
+      </Routes>
     </div>
   );
 };
